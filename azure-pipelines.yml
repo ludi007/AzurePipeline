@@ -19,7 +19,7 @@ steps:
   displayName: 'Archive $(System.DefaultWorkingDirectory)/_ludi007.AzurePipeline'
   inputs:
     rootFolderOrFile: '$(System.DefaultWorkingDirectory)/_ludi007.AzurePipeline'
-    includeRootFolder: true
+    includeRootFolder: false
     archiveType: 'zip'
     archiveFile: '$(System.DefaultWorkingDirectory)/_ludi007.AzurePipeline.zip'
     replaceExistingArchive: true
