@@ -17,7 +17,7 @@ steps:
   displayName: 'dotnet build $(buildConfiguration)'
 
 - task: ArchiveFiles@2
-  displayName: 'Archive $(System.DefaultWorkingDirectory)/_ludi007.AzurePipeline'
+  displayName: 'Archive D:/_ludi007.AzurePipeline'
   inputs:
-    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/_ludi007.AzurePipeline'
+    rootFolderOrFile: 'D:/_ludi007.AzurePipeline'
     includeRootFolder: false
