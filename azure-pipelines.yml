@@ -15,3 +15,13 @@ variables:
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
+
+steps:
+- task: ArchiveFiles@2
+  displayName: 'Archive $(System.DefaultWorkingDirectory)/_ludi007.AzurePipeline'
+  inputs:
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/_ludi007.AzurePipeline'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(System.DefaultWorkingDirectory)/_ludi007.AzurePipeline.zip'
+    replaceExistingArchive: true
