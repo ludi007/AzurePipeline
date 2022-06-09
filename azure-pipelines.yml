@@ -1,4 +1,11 @@
 # ASP.NET Core
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(Build.BinariesDirectory)'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
 # Build and test ASP.NET Core projects targeting .NET Core.
 # Add steps that run tests, create a NuGet package, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
@@ -15,10 +22,3 @@ variables:
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
-
-- task: ArchiveFiles@2
-  displayName: 'Archive D:/_ludi007.AzurePipeline'
-  inputs:
-    rootFolderOrFile: 'D:/_ludi007.AzurePipeline'
-    includeRootFolder: false
-    replaceExistingArchive: false
