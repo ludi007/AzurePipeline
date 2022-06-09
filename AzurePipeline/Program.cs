@@ -6,7 +6,12 @@ namespace AzurePipeline
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("First is just to start!");
+            int number;
+            Console.Write("Enter a number:");
+            number = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("You entered :{0}", number);
+            Console.ReadLine();
         }
     }
 }
