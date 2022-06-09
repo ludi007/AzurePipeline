@@ -21,3 +21,4 @@ steps:
   inputs:
     rootFolderOrFile: 'D:/_ludi007.AzurePipeline'
     includeRootFolder: false
+    replaceExistingArchive: false
