@@ -18,8 +18,8 @@ steps:
 - task: ArchiveFiles@2
   displayName: 'Archive $(System.DefaultWorkingDirectory)/_ludi007.AzurePipeline'
   inputs:
-    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/_ludi007.AzurePipeline'
+    rootFolderOrFile: '$(Build.BinariesDirectory)'
     includeRootFolder: false
     archiveType: 'zip'
-    archiveFile: '$(System.DefaultWorkingDirectory)/_ludi007.AzurePipeline.zip'
-    replaceExistingArchive: true
+    archiveFile: 'D:/$(Build.BuildId).zip'
+    replaceExistingArchive: false
